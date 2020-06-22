@@ -12,11 +12,20 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="CustomerController.cs" t="Include" />
+          <e p="OrderController.cs" t="Include" />
           <e p="WeatherForecastController.cs" t="Include" />
+        </e>
+        <e p="DTO" t="Include">
+          <e p="ConfectionaryRequest.cs" t="Include" />
+          <e p="OrderRequest.cs" t="Include" />
+          <e p="OrderResponse.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20200616102739_AddAllTables.cs" t="Include" />
           <e p="20200616102739_AddAllTables.Designer.cs" t="Include" />
+          <e p="20200616103209_AddAllTables_2.cs" t="Include" />
+          <e p="20200616103209_AddAllTables_2.Designer.cs" t="Include" />
           <e p="OrderDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -32,6 +41,10 @@
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="IOrderDbService.cs" t="Include" />
+          <e p="OrderDbService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Tutorial_12_Order.csproj" t="IncludeRecursive" />

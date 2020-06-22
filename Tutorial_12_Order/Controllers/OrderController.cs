@@ -1,13 +1,25 @@
 using Microsoft.AspNetCore.Mvc;
+using Tutorial_12_Order.Models;
+using Tutorial_12_Order.Services;
 
 namespace Tutorial_12_Order.Controllers
 {
-    public class OrderController : Controller
+    public class OrderController : ControllerBase
     {
-        // GET
-        public IActionResult Index()
+
+        private IOrderDbService _service;
+
+        public OrderController(IOrderDbService service)
         {
-            return View();
+            _service = service;
         }
+
+        [HttpGet]
+        public IActionResult GetOrders(string name)
+        {
+            var res = _service.getOrders(name);
+            return Ok(res);
+        }
+        
     }
 }

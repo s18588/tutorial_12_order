@@ -9,6 +9,10 @@ namespace Tutorial_12_Order.Models
     public class OrderDbContext : DbContext
     {
         public DbSet<Employee> Employee { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Confectionery> Confectionery { get; set; }
+        public DbSet<Confectionery_Order> Confectionery_order { get; set; }
 
         public OrderDbContext()
         {
