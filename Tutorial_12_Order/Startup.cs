@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Tutorial_12_Order.Models;
+using Tutorial_12_Order.Services;
 
 namespace Tutorial_12_Order
 {
@@ -31,6 +32,7 @@ namespace Tutorial_12_Order
             {
                 options.UseSqlServer("Data Source=db-mssql16.pjwstk.edu.pl;Initial Catalog=s18588;User ID=apbds18588;Password=admin");
             });
+            services.AddTransient<IOrderDbService, OrderDbService>();
             services.AddControllers();
         }
 
